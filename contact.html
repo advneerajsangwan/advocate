@@ -160,27 +160,29 @@
       // Function to validate form fields
       function validateForm() {
          if (phoneInput.value) {
-            sendButton.classList.remove('inactive');
-            sendButton.classList.add('active');
+            sendButton.classList.remove('inactive btn');
+            sendButton.classList.add('btn btn-primary');
             sendButton.style.pointerEvents = 'auto'; // Enable the button
          } else {
-            sendButton.classList.remove('active');
-            sendButton.classList.add('inactive');
+            sendButton.classList.remove('btn btn-primary');
+            sendButton.classList.add('inactive btn');
             sendButton.style.pointerEvents = 'none'; // Disable the button
          }
       }
 
-      // Listen to input changes to validate the form in real-time
-      // nameInput.addEventListener('input', validateForm);
-      phoneInput.addEventListener('input', validateForm);
-      // messageInput.addEventListener('input', validateForm);
+      function clearForm() {
+         nameInput.value = ''
+         phoneInput.value = ''
+         messageInput.value = ''
+         validateForm()
+      }
 
+      phoneInput.addEventListener('input', validateForm);
 
 
       document.getElementById("contactForm").addEventListener("submit", async function (e) {
          e.preventDefault(); // Prevent default form submission
 
-         // Collect form data
          const formData = {
             to_name: 'NSLF',
             from_name: nameInput.value || 'Anonymous',
@@ -196,7 +198,8 @@
 
          emailjs.send('service_xv7mxx9', 'template_bi40z4z', formData).then(
             function (response) {
-               console.log('SUCCESS!', response.status, response.text);
+               alert('Thanks for Informing, We will get in touch with you shortly.');
+               clearForm();
             },
             function (err) {
                console.log('FAILED...', err);
