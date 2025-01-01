@@ -88,9 +88,9 @@
                      <form action="" id="contactForm">
                         <input type="text" class="mail_text" placeholder="Name" name="Name" id="name">
                         <input type="text" class="mail_text" placeholder="Phone Number *" name="Phone Number" id="phone" required>
-                        <textarea class="message-bt" placeholder="Message" rows="5" id="message" name="message" required></textarea>
+                        <textarea class="message-bt" placeholder="Message" rows="5" id="message" name="message"></textarea>
                         <div class="send_bt">
-                            <a href="javascript:void(0);" id="sendButton" class="inactive">Send Now</a>
+                            <button type="submit" href="javascript:void(0);" id="sendButton" class="inactive">Send Now</button>
                         </div>
                     </form>
                   </div>
@@ -185,7 +185,7 @@
             to_name: 'NSLF',
             from_name: nameInput.value || 'Anonymous',
             phone_number: phoneInput.value || '000000000',
-            message: messageInput.value || 'kuch btaya nhi.',
+            message: messageInput.value || 'Details btayi nhi inhone.',
          };
 
          console.log("Form Data:", formData); // For debugging
