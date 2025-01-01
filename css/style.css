@@ -146,6 +146,15 @@ img {
     height: auto;
 }
 
+.logo img{
+        max-width: 100%;
+        height: 40px;
+}
+
+.footer-logo{
+    height: 200px;
+}
+
  :focus {
     outline: 0;
 }
