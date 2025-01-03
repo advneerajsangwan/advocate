@@ -41,6 +41,8 @@
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
    </head>
    <body>
       <div class="header_section">
@@ -58,19 +60,19 @@
                      </a>
                      <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                           <a class="nav-link" href="index.html">Home</a>
+                           <a class="nav-link" href="#section_header">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
+                           <a class="nav-link" href="#section_about_us">About</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="what-we.html">What we do</a>
+                           <a class="nav-link" href="#section_box">What we do</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="blog.html">Blog</a>
+                           <a class="nav-link" href="#section_news">Blog</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contact Us</a>
+                           <a class="nav-link" href="section_contact">Contact Us</a>
                         </li>
                      </ul>
                   </nav>
@@ -87,7 +89,7 @@
             </nav>
          </div>
          <!-- banner section start --> 
-         <div class="banner_section layout_padding">
+         <div class="banner_section layout_padding" id="section_header">
             <div class="container-fluid">
                <div id="banner_slider" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
@@ -153,7 +155,7 @@
       </div>
       <!-- header section end -->
       <!-- box section start -->
-      <div class="container">
+      <div class="container" id="section_box">
          <div class="box_section">
             <div class="online_box">
                <div class="online_box_left">
@@ -194,7 +196,7 @@
       </div>
       <!-- box section end -->
       <!-- services section start -->
-      <div class="services_section">
+      <div class="services_section" id="section_service">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -334,7 +336,7 @@
       </div>
       <!-- services section end -->
       <!-- studies section start -->
-      <div class="studies_section layout_padding">
+      <div class="studies_section layout_padding" id="section_studies">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -377,7 +379,8 @@
       </div>
       <!-- studies section end -->
       <!-- about section start -->
-      <div class="about_section layout_padding">
+      <!-- about section start -->
+      <div class="about_section layout_padding margin_top90" id="section_about_us">
          <div class="container">
             <div class="row">
                <div class="col-md-6">
@@ -386,7 +389,7 @@
                <div class="col-md-6">
                   <div class="about_text_main">
                      <h1 class="about_taital">About Us</h1>
-                     <p class="banner_text">**About Us**  
+                     <p class="banner_text"> 
 
                         Welcome to Nyaya Setu Law Firm, your trusted partner in delivering justice and legal solutions. Located at 867 Akhardham Apartments, Sector 19, Dwarka, Delhi - 110075, we are committed to providing expert legal services tailored to meet the needs of individuals and businesses alike.  
                         
@@ -401,8 +404,9 @@
          </div>
       </div>
       <!-- about section end -->
+      <!-- about section end -->
       <!-- testimonial section start -->
-      <div class="customer_section layout_padding">
+      <div class="customer_section layout_padding" id="section_testimonial">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
@@ -486,7 +490,7 @@
       </div>
       <!-- testimonial section end -->
       <!-- news section start -->
-      <div class="news_section layout_padding">
+      <div class="news_section layout_padding" id="section_news">
          <div class="container">
             <h1 class="news_taital">Recent News</h1>
             <div class="news_section_2">
@@ -515,24 +519,25 @@
       </div>
       <!-- news section end -->
       <!-- contact section start -->
-      <div class="contact_section layout_padding">
+      <div class="contact_section layout_padding" id="section_contact">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
-                  <h1 class="contact_taital">Free Consulation</h1>
+                  <h1 class="contact_taital">We Provide Free Consulations</h1>
                </div>
             </div>
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-12">
                      <div class="mail_section map_form_container">
-                        <form action="">
-                           <input type="text" class="mail_text" placeholder="Name" name="Name">
-                           <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number"> 
-                           <input type="text" class="mail_text" placeholder="Your Email" name="Your Email">
-                           <textarea class="message-bt" placeholder="message" rows="5" id="comment" name="message"></textarea>
-                           <div class="send_bt active"><a href="#">Send Now</a></div>
-                        </form>
+                        <form action="" id="contactForm">
+                           <input type="text" class="mail_text" placeholder="Name" name="Name" id="name">
+                           <input type="text" class="mail_text" placeholder="Phone Number *" name="Phone Number" id="phone" required>
+                           <textarea class="message-bt" placeholder="Message" rows="5" id="message" name="message"></textarea>
+                           <div class="send_bt">
+                               <button type="submit" href="javascript:void(0);" id="sendButton" class="inactive btn btn-primary">Send Message</button>
+                           </div>
+                       </form>
                      </div>
                   </div>
                </div>
@@ -541,7 +546,7 @@
       </div>
       <!-- contact section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
+      <div class="footer_section layout_padding" id="section_footer">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -592,4 +597,66 @@
       <script src="js/custom.js"></script>
       <!-- javascript --> 
    </body>
+
+   <script>
+
+      // Get form elements
+      const nameInput = document.getElementById('name');
+      const phoneInput = document.getElementById('phone');
+      const messageInput = document.getElementById('message');
+      const sendButton = document.getElementById('sendButton');
+
+      // Function to validate form fields
+      function validateForm() {
+         if (phoneInput.value) {
+            sendButton.classList.remove('inactive btn');
+            sendButton.classList.add('btn btn-primary');
+            sendButton.style.pointerEvents = 'auto'; // Enable the button
+         } else {
+            sendButton.classList.remove('btn btn-primary');
+            sendButton.classList.add('inactive btn');
+            sendButton.style.pointerEvents = 'none'; // Disable the button
+         }
+      }
+
+      function clearForm() {
+         nameInput.value = ''
+         phoneInput.value = ''
+         messageInput.value = ''
+         validateForm()
+      }
+
+      phoneInput.addEventListener('input', validateForm);
+
+
+      document.getElementById("contactForm").addEventListener("submit", async function (e) {
+         e.preventDefault(); // Prevent default form submission
+
+         const formData = {
+            to_name: 'NSLF',
+            from_name: nameInput.value || 'Anonymous',
+            phone_number: phoneInput.value || '000000000',
+            message: messageInput.value || 'Details btayi nhi inhone.',
+         };
+
+         console.log("Form Data:", formData); // For debugging
+
+         emailjs.init({
+            publicKey: 'T5E9PvEEiQazoflut',
+         });
+
+         emailjs.send('service_xv7mxx9', 'template_bi40z4z', formData).then(
+            function (response) {
+               alert('Thanks for Informing, We will get in touch with you shortly.');
+               clearForm();
+            },
+            function (err) {
+               console.log('FAILED...', err);
+            },
+         );
+
+      });
+
+
+   </script>
 </html>
