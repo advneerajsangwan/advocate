@@ -24,6 +24,15 @@
 
     <!-- Basic SEO Meta Tags -->
     <title>Nyaya Setu Law Firm | Legal Services in Dwarka, New Delhi</title>
+     <!-- Favicon for various devices -->
+   <link rel="icon" href="images/favicon/android-chrome-192x192.png" type="image/png" sizes="16x16">
+   <link rel="icon" href="images/favicon/android-chrome-192x192.png" type="image/png" sizes="32x32">
+   <link rel="icon" href="images/favicon/android-chrome-192x192.png" type="image/png" sizes="48x48">
+   <link rel="icon" href="images/favicon/android-chrome-192x192.png" type="image/png" sizes="64x64">
+   
+   <!-- Apple Touch Icon for iOS devices -->
+   <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" sizes="180x180" alt="Nyaya Setu Law Firm">
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
@@ -866,26 +875,22 @@
         "Lawyer for legal advice in New Delhi"
     ];
 
-    // Function to add the SEO keywords in meta tags
     function addSeoKeywords() {
         const head = document.head;
         const metaTag = document.createElement('meta');
         metaTag.name = 'keywords';
-        metaTag.content = seoKeywords.join(', '); // Join all keywords into one string
-        head.appendChild(metaTag); // Append the meta tag to the head section
+        metaTag.content = seoKeywords.join(', ');
+        head.appendChild(metaTag); 
 
         const allElements = document.querySelectorAll('*');
 
-        // Loop through all elements and add SEO keywords to their 'name' attribute
         allElements.forEach(element => {
             if (!element.hasAttribute('name')) {
-                // Add 'name' attribute with SEO keywords if it doesn't already have one
                 element.setAttribute('name', seoKeywords.join(', '));
             }
         });
     }
 
-    // Call the function to add keywords when the page loads
     window.onload = addSeoKeywords;
 </script>
 
