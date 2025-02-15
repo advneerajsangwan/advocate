@@ -649,7 +649,7 @@ border-bottom: 1px solid;
     position: absolute;
     left: 50%;
     bottom: 0;
-    height: 3px;
+    height: 4px;
     content: "";
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -658,7 +658,7 @@ border-bottom: 1px solid;
     transform: -moz-translateX(-50%);
 }
 .section-title h2:before {
-    width: 90px;
+    width: 50%;
     background: rgb(0, 20, 49);
 }
 .section-title h2:after {
