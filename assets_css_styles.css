@@ -2769,7 +2769,7 @@ ol {
 	margin-top:50px;
 }
 .bg-overlayn1 {
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(b-cumb.png);
+    background: linear-gradient(rgba(0,20,49,1), rgba(0,20,49,.8)), url(b-cumb.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
